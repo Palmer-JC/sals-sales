@@ -1,9 +1,104 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sal's Sales</title>
+    <title>Sal's Pre-owned Space Craft Sales</title>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babylonjs/5.3.0/babylon.js"</script> -->
+
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+
+    <script src="./javascript/QI_Lite.1.0.min.js"></script>
+
+    <script src="./javascript/abstractBanner.js"></script>
+    <script src="./javascript/abstractFury.js"></script>
+    <script src="./javascript/abstractEngineFin.js"></script>
+    <script src="./javascript/abstractExhaust.js"></script>
+    <script src="./javascript/abstractWarningSys.js"></script>
+    <script src="./javascript/abstractProjectile.js"></script>
+
+    <script src="./javascript/exports/setGeo.js"></script>
+    <script src="./javascript/exports/furyGeo.js"></script>
+
+    <script src="./javascript/main.js"></script>
+
+    <style>
+         html, body   { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; }
+         #renderCanvas{ width: 100%; height: 100%; }
+         .wrapper {
+             display: flex;
+             flex-flow: column;
+             flex-wrap: wrap;
+             width: 100%;
+             height: 100%;
+             margin: 0;
+         }
+
+             .bottom {
+             width: 100%;
+             height: 3%;
+             margin: 0;
+             }
+             .canvas {
+             width: 100%;
+             height: 97%;
+             margin: 0;
+             }
+    </style>
 </head>
 <body>
-hello world
+    <div class="canvas">
+        <canvas id="renderCanvas"></canvas>
+    </div>
+    <div class="bottom" align="right">
+        <button onclick="window.location.href='https://github.com/Palmer-JC/sals-sales'">Source Web Site</button>
+        ||
+        <button onclick="fury.adjustHatch()">Hatch toggle [H]</button>
+        <button onclick="fury.turnEngineOnOff(); if (!fury.engineRunning) document.getElementById('throttle').value = 0;">Engine toggle [E]</button>
+        Throttle [1-9]:
+        <input id = 'throttle' type="range" min=0 max=1 step=0.1 value=0
+               onchange="fury.setThrottle(Number(document.getElementById('throttle').value))"
+        >
+        <button onclick="fury.fireGuns(1.0)">Fire Weapons [F]</button>
+        ||
+        <button onclick="xrMappings()">XR Controller Mappings</button>
+    </div>
+<script>
+    document.getElementById('throttle').value = 0; // forced for firefox
+
+    function dskMappings() {
+        let msg = 'Outside of XR, you will not be able to teleport.  Arc Rotate Camera in use.  Key Assignments:\n  \n';
+        msg    += 'h-H\t\t Toggle Hatch  \n';
+        msg    += 'e-E\t\t Toggle Engine \n';
+        msg    += 'f-F\t\t Fire Guns \n';
+        msg    += 'n1-9\t Throttle Level \n';
+
+        alert(msg);
+    }
+
+    function xrMappings() {
+        let msg = 'X- Toggle Hatch,  ';
+        msg    += 'A- Toggle Engine, ';
+        msg    += 'Triggers- Fire Guns, ';
+
+        msg    += 'Left Thumb Stick- Teleport, ';
+        msg    += 'Right Thumb Stick- Throttle Level';
+
+        alert(msg);
+    }
+
+    let doesVR;
+    let doesAR;
+
+    // probably not likely a headset supports both, but need to check for both
+    BABYLON.WebXRSessionManager.IsSessionSupportedAsync("immersive-vr").then((result) =>{
+        doesVR = result;
+        // do not care about AR, but do not want to have to go looking
+        BABYLON.WebXRSessionManager.IsSessionSupportedAsync("immersive-ar").then((result2) =>{
+            doesAR = result2;
+
+            begin(doesVR, doesAR);
+        });
+    });
+</script>
 </body>
 </html>

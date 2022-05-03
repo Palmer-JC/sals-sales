@@ -21,11 +21,12 @@ Got portions of sounds for the firing of weapons and the engine sound.
 
 - Firing sound came from "[Scifi Laser Gun Firing](https://freesound.org/s/495054/)" by [TannerSound](https://freesound.org/people/TannerSound/).
 - Engine sound came from "[Spaceship Ambience](https://freesound.org/s/234316/)" by [nick121087](https://freesound.org/people/nick121087/).
+- Ding sound came from "[Elevator_Ping_01](https://freesound.org/s/459349/)" by [MATRIXXX_](https://freesound.org/people/MATRIXXX_/).
 
 # License(s)
 In a aggregation type project, things are mix of licenses:
 - The Babylon JS files are not directly in this repository, but it is Apache 2.0
 - The Star Fury is CC-BY.  I am not storing the original, but both my modified .blend & original are CC-BY.
 - The space texture is CC-BY.  The converted ASTC formatted file is CC-BY as well.
-- The audio files are both CC-BY.
+- The audio files are all CC-BY.
 - Anything else is Copyright © 2022 Jeffrey Palmer (MIT License)
