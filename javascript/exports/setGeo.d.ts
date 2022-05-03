@@ -24,11 +24,11 @@ declare module SALS{
         constructor(name: string, scene: BABYLON.Scene, source? : BjsBanner);
     }
 
-    class ComeOnDownBanner extends AbstractBanner {
-        constructor(name: string, scene: BABYLON.Scene, source? : ComeOnDownBanner);
-    }
-
     class CreditsBanner extends AbstractBanner {
         constructor(name: string, scene: BABYLON.Scene, source? : CreditsBanner);
+    }
+
+    class ComeOnDownBanner extends AbstractBanner {
+        constructor(name: string, scene: BABYLON.Scene, source? : ComeOnDownBanner);
     }
 }

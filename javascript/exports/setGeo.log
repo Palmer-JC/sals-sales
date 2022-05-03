@@ -8,7 +8,7 @@ Exporter version: 3.3.0, Blender version: 3.0.0
 		UVs Precision       :  3
 		Vert Color Precision:  3
 		Mat Weight Precision:  2
-		Texture directory   :  xxx
+		Texture directory   :  W:\sals-sales\javascript\exports\../../images
 	Python World class constructor completed
 	WARNING: No active camera has been assigned, or is not in a currently enabled collection
 	processing begun of mesh:  FurySalesDock
@@ -92,16 +92,6 @@ Exporter version: 3.3.0, Blender version: 3.0.0
 		num uvs2           :  0
 		num colors         :  0
 		num triangles      :  808
-	processing begun of mesh:  ComeOnDownBanner
-		processing begun of material:  SALS.warningMat
-		registered as also a user of material:  SALS.warningMat
-		num positions      :  5547
-		num normals        :  0
-		num tangents       :  0
-		num uvs            :  0
-		num uvs2           :  0
-		num colors         :  0
-		num triangles      :  5449
 	processing begun of mesh:  CreditsBanner
 		processing begun of material:  SALS.InnerMat
 		registered as also a user of material:  SALS.InnerMat
@@ -112,14 +102,24 @@ Exporter version: 3.3.0, Blender version: 3.0.0
 		num uvs2           :  0
 		num colors         :  0
 		num triangles      :  4775
+	processing begun of mesh:  ComeOnDownBanner
+		processing begun of material:  SALS.warningMat
+		registered as also a user of material:  SALS.warningMat
+		num positions      :  5714
+		num normals        :  0
+		num tangents       :  0
+		num uvs            :  11428
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  5612
 ========= Writing of files started =========
 	writing mesh:  FurySalesDock
 	writing mesh:  FurySalesDockWarningSys
 	writing mesh:  ProjectionSphere
 	writing mesh:  MainSalesDock
 	writing mesh:  BjsBanner
-	writing mesh:  ComeOnDownBanner
 	writing mesh:  CreditsBanner
+	writing mesh:  ComeOnDownBanner
 ========= Writing of files completed =========
 ========= end of processing =========
-elapsed time:  0 min, .5959 secs
+elapsed time:  0 min, .7099 secs
