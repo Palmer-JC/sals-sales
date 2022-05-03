@@ -1,0 +1,16 @@
+Mesh, positions, normals, tangents, uvs, uvs2, colors, triangles, Skel Weights
+"Fury", 284081, 0, 0, 0, 0, 0, 273376
+"Hatch", 7354, 0, 0, 0, 0, 0, 7530
+"Projectile", 64, 0, 0, 0, 0, 0, 124
+"BottomLeft_InnerFin", 6234, 0, 0, 0, 0, 0, 5302
+"BottomLeft_OuterFin", 6272, 0, 0, 0, 0, 0, 5302
+"BottomRight_InnerFin", 6234, 0, 0, 0, 0, 0, 5302
+"BottomRight_OuterFin", 6234, 0, 0, 0, 0, 0, 5302
+"TopLeft_InnerFin", 6266, 0, 0, 0, 0, 0, 5300
+"TopLeft_OuterFin", 6215, 0, 0, 0, 0, 0, 5268
+"TopRight_InnerFin", 6234, 0, 0, 0, 0, 0, 5302
+"TopRight_OuterFin", 6234, 0, 0, 0, 0, 0, 5302
+"BottomLeft_EngineExhaust", 257, 0, 0, 0, 0, 0, 480
+"BottomRight_EngineExhaust", 257, 0, 0, 0, 0, 0, 480
+"TopRight_EngineExhaust", 257, 0, 0, 0, 0, 0, 480
+"TopLeft_EngineExhaust", 257, 0, 0, 0, 0, 0, 480
