@@ -63,13 +63,17 @@ class AbstractProjectile extends QI_Lite.Mesh {
 
     targetHit() {
         this.clearAllQueues(true); // get rid of any shots which might be queued
-
+        // need to adjust in case of a teleport (shared, crap I know, but ran out of tim
+        AbstractProjectile.targetHitAudio.setVolume(1.0);
         const events = [
             () => { AbstractProjectile.targetHitAudio.play(); },
 
             new QI_Lite.Stall(500),  // the length of the sound, 1511
 
-            ()=> {this.setEnabled(false); } // need to be enabled for events here to work, so this must be in last event
+            ()=> {
+                    AbstractProjectile.targetHitAudio.play();
+                    this.setEnabled(false); // need to be enabled for events here to work, so this must be in last event
+                 }
         ];
         this.queueEventSeries(events);
     }
